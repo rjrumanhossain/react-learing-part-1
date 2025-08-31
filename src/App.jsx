@@ -7,6 +7,12 @@ function App() {
     <>
 
       <NetflixSeries/>
+      <NetflixSeries/>
+      <NetflixSeries/>
+      <NetflixSeries/>
+      <NetflixSeries/>
+      <NetflixSeries/>
+
 
     </>
   )
