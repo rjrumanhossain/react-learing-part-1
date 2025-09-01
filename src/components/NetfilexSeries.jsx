@@ -1,25 +1,28 @@
-const NetflixSeries = () => {
-    const title = "Netflix Series";
-    const des = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cupiditate, mollitia modi dolorum vero laborum quia suscipit cumque voluptatem distinctio error blanditiis autem tempore facilis, quibusdam adipisci. Iusto, sed possimus?";
-    const rating = 8.12;
-    let age = 18;
+import dataSeries from '../api/SeriesData.json'
 
-    const buttonChecker = () => {
-        if(age >= 18) return "Watch";
-        return "No Available";
-    }
+
+const NetflixSeries = () => {
 
     return(
-        <>
-            <div>
-                <img width="400" src="thumbnail.jpeg" alt="thumbnail.jpeg"  />
-                <h1>Name: {title}</h1>
-                <h4>Ratings: {rating}</h4>
-                <p>Summary: {des} </p>
-                <button>{buttonChecker()} </button>
-              
-            </div>
-        </>
+        <ul>
+            {dataSeries.map((data) =>{
+                return(
+                    <li key={data.id}>
+                        <img width="400" src={data.img_url} alt="thumbnail.jpeg"  />
+                        <h1 >Name: {data.name} </h1>
+                        <h4>Ratings: {data.rating} </h4>
+                        <p>Summary: {data.description} </p>
+                        <p>Cast: {data.cast} </p>
+                        <p>Gendre: {data.genre} </p>
+
+                        <a href={data.watch_url} target="_blank" rel="noopener noreferrer">
+                            <button>Watch Now</button>
+                        </a>
+                    </li>
+                )
+            })}
+            
+        </ul>
     )
 }
 
