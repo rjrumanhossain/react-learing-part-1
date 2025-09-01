@@ -8,7 +8,6 @@ export const SeriesCard = ({data}) => {
             <p>Summary: {description} </p>
             <p>Cast: {cast} </p>
             <p>Gendre: {genre} </p>
-
             <a href={watch_url} target="_blank" rel="noopener noreferrer">
                 <button>Watch Now</button>
             </a>
