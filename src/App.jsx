@@ -6,7 +6,10 @@ function App() {
   return (
     <>
 
-      <NetflixSeries/>
+
+
+
+      {/* <NetflixSeries/> */}
       {/* <NetflixSeries/>
       <NetflixSeries/>
       <NetflixSeries/>
